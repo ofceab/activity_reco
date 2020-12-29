@@ -83,15 +83,6 @@ class _HomeDemoScreenState extends State<HomeDemoScreen> {
                 SizedBox(
                   height: 25,
                 ),
-                StreamBuilder<LocationData>(
-                  stream: _location.onLocationChanged,
-                  builder: (context, snaphot) => Text(
-                    'Alititude ${snaphot.data.altitude}',
-                    textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.headline6.copyWith(
-                        color: Colors.indigo, fontWeight: FontWeight.bold),
-                  ),
-                )
               ],
             ),
           ),

@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:activities_recognization/utils/constants.dart';
 import 'package:activity_recognition_flutter/activity_recognition_flutter.dart';
 
 class ActivitiesRecognization {
@@ -23,31 +24,31 @@ class ActivitiesRecognization {
     String _activityName;
     switch (activityType) {
       case ActivityType.STILL:
-        _activityName = 'the device is lay';
+        _activityName = IS_LAYING_MESSAGE;
         break;
       case ActivityType.ON_FOOT:
-        _activityName = 'the user is walking';
+        _activityName = IS_WALKING_ON_FOOT_MESSAGE;
         break;
       case ActivityType.WALKING:
-        _activityName = 'the user is walking with the phone';
+        _activityName = IS_WALKING_MESSAGE;
         break;
       case ActivityType.IN_VEHICLE:
-        _activityName = 'the user is in a car';
+        _activityName = IS_IN_CAR_MESSAGE;
         break;
       case ActivityType.ON_BICYCLE:
         // TODO: Handle this case.
-        _activityName = 'the user is on bicycle';
+        _activityName = IS_ON_BICYCLE_MESSAGE;
         break;
       case ActivityType.RUNNING:
         // TODO: Handle this case.
-        _activityName = 'the user is running';
+        _activityName = IS_RUNNING_MESAGE;
         break;
       case ActivityType.UNKNOWN:
         // TODO: Handle this case.
-        _activityName = 'Unable to know that activity for now';
+        _activityName = UNABLE_TO_KNOW_ACTIVITY;
         break;
       default:
-        _activityName = 'Not Supported yet';
+        _activityName = NOT_SUPPORT_YET_MESSAGE;
         break;
     }
     return _activityName;
